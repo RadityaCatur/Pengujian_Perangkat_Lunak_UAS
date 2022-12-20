@@ -13,15 +13,11 @@ describe('login', () => {
 
     // menekan tombol masuk
     cy.get('#loding').click()
-  })
-})
 
-describe('menguji fitur detail peminjaman', () => {
-  it('klik tombol detail peminjaman', () => {
+    // mengklik tombol detail peminjaman
     cy.get('.btn').click()
-  })
 
-  it('klik tombol kembali', () => {
+    // mengklik tombol kembali
     cy.get('.btn').click()
   })
 })
