@@ -19,27 +19,27 @@ describe('login', () => {
     })
   })
   
-  describe('memasukkan no peminjaman yang tersedia', () => {
-    it('memasukkan no peminjaman yang tersedia', () => {
+  describe('memasukkan ISBN buku yang tersedia', () => {
+    it('memasukkan ISBN buku yang tersedia', () => {
       cy.get('#example1_filter > label > .form-control').type('132-123-234-231')
     })
   
-    it('mengecek apakah peminjaman yang dicari tersedia', () => {
+    it('mengecek apakah buku yang dicari tersedia', () => {
       cy.get('.sorting_1').should('be.visible')
     })
   })
   
   
-  describe('memasukkan no peminjaman yang tidak tersedia', () => {
+  describe('memasukkan ISBN buku yang tidak tersedia', () => {
     it('menghapus isi kolom pencarian', () => {
       cy.get('#example1_filter > label > .form-control').clear()
     })
   
-    it('memasukkan no peminjaman yang tidak tersedia', () => {
+    it('memasukkan ISBN buku yang tidak tersedia', () => {
       cy.get('#example1_filter > label > .form-control').type('132-123-234-XXX')
     })
   
-    it('mengecek apakah peminjaman yang dicari tidak tersedia', () => {
+    it('mengecek apakah buku yang dicari tidak tersedia', () => {
       cy.get('.sorting_1').should('not.exist')
     })
   })

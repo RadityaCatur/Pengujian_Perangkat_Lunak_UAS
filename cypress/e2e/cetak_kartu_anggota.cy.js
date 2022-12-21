@@ -14,17 +14,14 @@ describe('login', () => {
       // menekan tombol masuk
       cy.get('#loding').click()
 
-      // masuk ke fitur cari buku
-      cy.get(':nth-child(3) > .cursor').click()
-  
-      // mengklik tombol detail buku
-      cy.get('.btn').click()
-  
-      // mengklik detail transaksi peminjaman buku
-      cy.get(':nth-child(2) > .btn').click()
+      // masuk ke fitur cetak kartu anggota
+      cy.get(':nth-child(5) > .cursor').click()
 
-      // mengklik close detail transaksi peminjaman buku
-      cy.get('.modal-footer > .btn').click()
+      // menuju ke halaman baru
+      cy.visit('http://localhost/sistem_perpustakaan-projek2/user/detail/2')
+
+      // mengklik tombol cetak kartu
+      cy.get('.btn').click()
     })
   })
 
